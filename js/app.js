@@ -102,7 +102,7 @@ const drawChart = async () => {
     .data(dataset)
     .join('circle')
     .attr('class', (data) =>
-      data.Doping ? 'dot fill-orange' : 'dot fill-blue'
+      data.Doping ? 'dot stroke fill-orange' : 'dot stroke fill-blue'
     )
     .attr('data-xvalue', (data) => new Date(data.Year.toString()))
     .attr('data-yvalue', (data) => parseTime(data.Time))
